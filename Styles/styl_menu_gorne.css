@@ -1,0 +1,126 @@
+header li
+{
+  list-style: none;
+}
+
+.navbar 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8%;
+  background-image: linear-gradient(to right, #2f2f74, #8b0000);
+  opacity: 0.8;
+  color: #fff;  
+  max-height: 80px;
+  padding-right: 5vw;
+}
+
+.nav-links a
+{
+  color: #fff;
+}
+
+.logo
+{
+  font-size: 32px;  
+  padding-left: 5vw;
+  animation: 1.5s linear 0s 1 fadein;
+}
+
+.logo a
+{
+  color: #000;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@keyframes fadein { 
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.logo:hover
+{
+  animation: spin 2s linear; 
+}
+
+.logo a:hover
+{
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.menu
+{
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover
+{
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li
+{
+  padding: 5px 14px;
+}
+
+.logo .material-icons
+{
+  display: none;
+}
+
+.menu .material-icons
+{
+  display: none;
+}
+ 
+/* APPLYING MEDIA QUERIES */
+@media (min-width: 768px) and (max-width: 992px)
+{
+
+  .logotext
+  {
+      display: none;
+  }
+
+  .logo .material-icons
+  {
+     display: flex;
+  }
+
+
+}
+
+@media (max-width: 767px)
+{   
+
+  .logotext
+  {
+      display: none;
+  }
+
+  .logo .material-icons
+  {
+     display: flex;
+  }
+  
+  .menu .menutext
+  {
+      display: none;
+  }
+
+  .menu .material-icons
+  {
+      display:flex;
+  }
+
+}

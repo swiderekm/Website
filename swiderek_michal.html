@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/oto.ico" type="image/x-icon" />
+    <title>NBA przez lata</title>
+    <meta name="author" content="Michal">
+    <meta name="keywords" content="Basketball, NBA, Koszykówka, Kosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="Styles/app.css">
+    <link rel="stylesheet" media="screen" href="Styles/styl_menu_gorne.css">
+    <link rel="stylesheet" media="screen" href="Styles/styl_menu_boczne.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="JS/zegar.js"></script>
+</head>
+
+<body style="margin: 0 auto;">
+    <div class="landing_page">
+        <img src="https://cdn.pixabay.com/photo/2016/11/18/22/10/man-1837119_1280.jpg" alt="Koszykarz trzymający piłkę">
+        <p>https://cdn.pixabay.com/photo/2016/11/18/22/10/man-1837119_1280.jpg</p>
+    </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="#" class="logotext">HHTN</a><i class="material-icons">sports_basketball</i></div>
+            <div class="nav-links">
+                <ul class="menu">
+                    <li><a href="/" class="menutext menutext1">Historia</a><i
+                            class="material-icons menutext1">menu_book</i></li>
+                    <li><a href="/" class="menutext menutext2">NBA</a><i
+                            class="material-icons menutext2">sports_basketball</i></li>
+                    <li><a href="/" class="menutext menutext3">3x3</a><i class="material-icons menutext3">groups</i>
+                    </li>
+                    <li><a href="/" class="menutext menutext4">Media</a><i
+                            class="material-icons menutext4">fast_forward</i></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-main container">
+        <div class="side-menu-container">
+            <nav class="side-menu">
+                <a href="#" class="toSec1">
+                    <div><i class="material-icons menutext1">menu_book</i></div>
+                </a>
+                <a href="#" class="toSec2">
+                    <div><i class="material-icons menutext2">sports_basketball</i></div>
+                </a>
+                <a href="#" class="toSec3">
+                    <div><i class="material-icons menutext3">groups</i></div>
+                </a>
+                <a href="#" class="toSec4">
+                    <div><i class="material-icons menutext4">fast_forward</i></div>
+                </a>
+            </nav>
+        </div>
+
+        <script>
+            function vh(v) {
+                var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                return (v * h) / 100;
+            }
+
+            $(".menutext1").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#sekcja1h1").offset().top + vh(81)
+                }, 2000);
+            });
+
+            $(".menutext2").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#sekcja2h1").offset().top - vh(18)
+                }, 2000);
+            });
+
+            $(".menutext3").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#sekcja3h1").offset().top - vh(18)
+                }, 2000);
+            });
+
+            $(".menutext4").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#sekcja4h1").offset().top - vh(18)
+                }, 2000);
+            });
+
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll < 800) {
+                    if ($(window).width() < 600) {
+                        $('.side-menu-container').fadeOut();
+                        $('.nav-links').fadeIn();
+                        $('.nav-links').css({
+                            display: "flex"
+                        });
+                    }
+                    else {
+                        $('.side-menu-container').fadeOut();
+                        $('.nav-links').fadeIn();
+                        $('.nav-links').css({
+                            display: "flex"
+                        });
+                    }
+                }
+                else {
+                    if ($(window).width() < 600) {
+                        $('.side-menu-container').fadeOut();
+                        $('.nav-links').fadeIn();
+                        $('.nav-links').css({
+                            display: "flex"
+                        });
+                    }
+                    else {
+                        $('.side-menu-container').fadeIn();
+                        $('.nav-links').fadeOut();
+                    }
+                }
+
+            });
+        </script>
+
+        <div id="sekcja1" class="container">
+            <h1 id="sekcja1h1"><q>Hej, hej, tu NBA!</q>, czyli Twoje źródło wiedzy o koszykówce</h1>
+            <h2>Na początek, trochę o zasadach</h2>
+            <p>Przepisy gry w koszykówkę należą do jednych z najbardziej skomplikowanych na świecie. Poniżej znajdują
+                się
+                wybrane, skrócone zasady gry w koszykówkę. W meczu grają ze sobą dwie drużyny, mające po 5 zawodników na
+                boisku. Zwycięża drużyna, która uzyska większą liczbę punktów na koniec meczu. Możliwe jest
+                również rozegranie dwumeczu z łączoną punktacją.<br><br>
+
+                Mecz składa się z czterech 10-minutowych kwart. Jeśli wynik jest nierozstrzygnięty (remis), rozgrywa się
+                tyle 5-minutowych dogrywek, ile będzie konieczne do ustalenia wyniku meczu.<br><br>
+
+                Podczas meczu występują następujące przerwy:
+            </p>
+            <ul>
+                <li>20-minutowa przerwa przed rozpoczęciem meczu,</li>
+                <li>2-minutowe przerwy między 1 i 2 kwartą, 3 i 4 kwartą, oraz między dogrywkami,</li>
+                <li>15-minutowa przerwa między 2 i 3 kwartą.</li>
+            </ul>
+
+            <div class="photos">
+                <img src="https://images.unsplash.com/photo-1542652694-40abf526446e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="Piłka do koszykówki">
+                <a href="https://unsplash.com/photos/kXJksx1kdJ0">Link do obrazka</a>
+            </div>
+            <h2>Krótka geneza powstania koszykówki</h2>
+            <p> Koszykówka powstała około grudnia 1891 roku w Springfield w stanie Massachusetts, gdy protestancki
+                pastor i
+                amerykański nauczyciel wychowania fizycznego (pochodzenia kanadyjskiego) w YMCA James Naismith opracował
+                nową grę zespołową. W 1891 roku Rada Pedagogiczna w Springfield YMCA Sport
+                College rozpisała konkurs na dyscyplinę sportu potrzebną do zachowania kondycji dzieci i młodzieży w
+                czasie
+                semestru zimowego. Naismith chciał stworzyć grę, która minimalizowałaby kontakt fizyczny, ale
+                zawierała dużo skakania, biegania oraz koordynacji wzrokowo-ruchowej związanej z posiadaniem piłki w
+                dłoniach. Wygrał projekt dr. Jamesa Naismitha, który napisał:<br><br>
+
+                <q>Przeciętny człowiek jest pod silnym wpływem tradycji. Jeśli jest zainteresowany grą sportową,
+                    jakikolwiek
+                    wysiłek fizyczny, aby coś w niej zmienić, tworzy sprzeciw w jego umyśle. Uświadomiłem sobie, że
+                    wszelkie
+                    usiłowania, by zmienić znane gry, nieuchronnie przyniosą opłakany rezultat.[…] Wówczas wziąłem pod
+                    uwagę
+                    dużą piłkę, łatwą w ujęciu, którą każdy mógłby chwytać i rzucać po niewielkim przygotowaniu. […]
+                    potem
+                    znalazłem dwa stare kosze do zbierania brzoskwiń. Znalazłem młotek i kilka gwoździ i przybiłem kosze
+                    do
+                    dolnej krawędzi balkonów sali gimnastycznej</q><br><br>
+
+                Gra polegała na rzucaniu piłki do wiklinowych koszy zawieszonych na balkonach sali
+                gimnastycznej. Kosze te nie miały dziury na ich dnie, więc po każdym celnym rzucie piłkę
+                należało wyciągać specjalnymi kijami. Początkowo do gry w koszykówkę używano zwykłej piłki
+                futbolowej. Pierwsza piłka przeznaczona wyłącznie do koszykówki powstała w 1894 roku.
+                Naismith stworzył podstawowe zasady gry w koszykówkę:
+            </p>
+            <ol>
+                <li>Okrągłą piłką należało grać wyłącznie przy użyciu rąk. Piłka powinna być duża, lekka i możliwa do
+                    trzymania w dłoniach.</li>
+                <li>Trzymając piłkę, nie wolno było się z nią przemieszczać – należało ją podawać.</li>
+                <li>Zawodnicy mieli prawo znajdować się w dowolnym miejscu boiska.</li>
+                <li>Nie wolno było stosować przemocy fizycznej między zawodnikami.</li>
+                <li>Niewielka bramka w formie kosza powinna być umieszczona poziomo, wysoko w górze.</li>
+            </ol>
+
+            <h3>Koszykówka w Polsce</h3>
+            <p>Na ziemiach polskich pierwszy mecz koszykówki został rozegrany przez kobiety. Miało to miejsce 29 czerwca
+                1909 roku we Lwowie – w zawodach odbywających się na trawiastym boisku z koszami bez tablic, zagrało
+                sześć
+                zespołów gimnazjalnych. Po odzyskaniu przez Polskę niepodległości, koszykówka stała się sportem
+                powszechnie nauczanym w szkołach podstawowych i średnich. W styczniu 1919 odbył się pierwszy centralny
+                turniej koszykówki mężczyzn. W kolejnych latach (aż do 1928) organizowano w Polsce bardzo wiele zawodów
+                koszykówki zarówno męskiej, jak i kobiecej, rozgrywanych przez drużyny szkół średnich. Pierwsze
+                oficjalne Mistrzostwa Polski miały miejsce we wrześniu roku 1929 w Krakowie. Mistrzostwa te dotyczyły
+                koszykówki mężczyzn oraz kobiet. </p>
+            <p>Informacje pozyskane ze strony <a
+                    href="https://pl.wikipedia.org/wiki/Koszyk%C3%B3wka">Koszykówka - Wikipedia, wolna encyklopedia</a>
+            </p>
+            <hr>
+        </div>
+        <div id="sekcja2" class="container">
+            <h1 id="sekcja2h1">Kilka słów o NBA</h1>
+            <p>Paragraf z treścią: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis nisl neque, quis
+                ultricies ligula pellentesque vitae. Suspendisse potenti. Nulla vulputate risus a aliquam auctor.
+                Curabitur
+                dictum vulputate lorem, vitae viverra nibh gravida nec. Cras sed pulvinar ipsum, ac hendrerit leo.
+                Vivamus
+                molestie nibh in mauris laoreet ultricies. Fusce imperdiet nisi sed turpis scelerisque, et fermentum
+                sapien
+                rutrum. Curabitur interdum leo nisl, ac facilisis elit hendrerit at. Integer id viverra nunc. Nunc
+                sollicitudin
+                magna mi, id tempus ipsum cursus non. Curabitur bibendum urna quis ultrices pulvinar. Etiam vulputate
+                neque
+                id
+                sapien venenatis, eu auctor tellus bibendum. Pellentesque eget ipsum sem. Donec efficitur felis non eros
+                faucibus tincidunt. Sed molestie velit nec justo lacinia convallis. </p>
+            <p>Paragraf z treścią: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis nisl neque, quis
+                ultricies ligula pellentesque vitae. Suspendisse potenti. Nulla vulputate risus a aliquam auctor.
+                Curabitur
+                dictum vulputate lorem, vitae viverra nibh gravida nec. Cras sed pulvinar ipsum, ac hendrerit leo.
+                Vivamus
+                molestie nibh in mauris laoreet ultricies. Fusce imperdiet nisi sed turpis scelerisque, et fermentum
+                sapien
+                rutrum. Curabitur interdum leo nisl, ac facilisis elit hendrerit at. Integer id viverra nunc. Nunc
+                sollicitudin
+                magna mi, id tempus ipsum cursus non. Curabitur bibendum urna quis ultrices pulvinar. Etiam vulputate
+                neque
+                id
+                sapien venenatis, eu auctor tellus bibendum. Pellentesque eget ipsum sem. Donec efficitur felis non eros
+                faucibus tincidunt. Sed molestie velit nec justo lacinia convallis. </p>
+            <p>Paragraf z treścią: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis nisl neque, quis
+                ultricies ligula pellentesque vitae. Suspendisse potenti. Nulla vulputate risus a aliquam auctor.
+                Curabitur
+                dictum vulputate lorem, vitae viverra nibh gravida nec. Cras sed pulvinar ipsum, ac hendrerit leo.
+                Vivamus
+                molestie nibh in mauris laoreet ultricies. Fusce imperdiet nisi sed turpis scelerisque, et fermentum
+                sapien
+                rutrum. Curabitur interdum leo nisl, ac facilisis elit hendrerit at. Integer id viverra nunc. Nunc
+                sollicitudin
+                magna mi, id tempus ipsum cursus non. Curabitur bibendum urna quis ultrices pulvinar. Etiam vulputate
+                neque
+                id
+                sapien venenatis, eu auctor tellus bibendum. Pellentesque eget ipsum sem. Donec efficitur felis non eros
+                faucibus tincidunt. Sed molestie velit nec justo lacinia convallis. </p>
+            <p>Paragraf z treścią: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis nisl neque, quis
+                ultricies ligula pellentesque vitae. Suspendisse potenti. Nulla vulputate risus a aliquam auctor.
+                Curabitur
+                dictum vulputate lorem, vitae viverra nibh gravida nec. Cras sed pulvinar ipsum, ac hendrerit leo.
+                Vivamus
+                molestie nibh in mauris laoreet ultricies. Fusce imperdiet nisi sed turpis scelerisque, et fermentum
+                sapien
+                rutrum. Curabitur interdum leo nisl, ac facilisis elit hendrerit at. Integer id viverra nunc. Nunc
+                sollicitudin
+                magna mi, id tempus ipsum cursus non. Curabitur bibendum urna quis ultrices pulvinar. Etiam vulputate
+                neque
+                id
+                sapien venenatis, eu auctor tellus bibendum. Pellentesque eget ipsum sem. Donec efficitur felis non eros
+                faucibus tincidunt. Sed molestie velit nec justo lacinia convallis. </p>
+            <hr>
+        </div>
+        <div id="sekcja3" class="container">
+            <h1 id="sekcja3h1">Koszykówka 3x3</h1>
+            <div class="photos">
+                <img src="https://img.freepik.com/darmowe-wektory/kreskowka-tlo-boisko-do-koszykowki-w-miescie-boisko-sportowe-zewnetrzne-z-koszem-do-gry_1441-2690.jpg?w=1380"
+                    alt="Kosz do koszykówki">
+                <a
+                    href="https://pl.freepik.com/darmowe-wektory/kreskowka-tlo-boisko-do-koszykowki-w-miescie-boisko-sportowe-zewnetrzne-z-koszem-do-gry_3685390.htm#query=basketball&position=23&from_view=search">Link
+                    do obrazka</a>
+            </div>
+            <p><strong>Koszykówka 3×3</strong> to dyscyplina sportu drużynowego (sport olimpijski), odmiana klasycznej
+                koszykówki, w której dwie trzyosobowe drużyny grają przeciwko sobie próbując zdobyć jak największą
+                liczbę punktów wrzucając piłkę do jednego kosza. Jest zarządzana przez FIBA.<br><br>
+                Koszykówka 3×3 to odmiana koszykówki grana na ulicach i salach gimnastycznych na całym świecie, choć w
+                mniej formalny sposób. Począwszy od końca lat osiemdziesiątych, sport zaczął być standaryzowany w całych
+                Stanach Zjednoczonych, w szczególności poprzez serie turniejów Gus Macker i Hoop It Up. Od tego czasu
+                liczba imprez i zawodów koszykówki 3×3 stale rośnie na całym świecie.<br>
+                Od 2007 roku FIBA organizuje mistrzostwa świata, Europy i World Tour. Format został przetestowany na
+                Halowych Igrzyskach Azjatyckich w 2007 i 2009 Młodzieżowych Igrzyskach Azjatyckich, zanim zadebiutował
+                na Młodzieżowych Igrzyskach Olimpijskich w 2010. Od 2020 będzie również obecny na Letnich Igrzyskach
+                Olimpijskich.
+            </p>
+            <p>
+                FIBA w 2007 wraz z sędziami stworzyła pierwsze oficjalne przepisy gry w koszykówkę 3x3. Po kilku
+                aktualizacjach w 2015 roku opublikowano dotychczasowe zasady. W sytuacjach, które nie są wyraźnie
+                określone, obowiązują normalne zasady koszykówki FIBA.<br><br>
+                Sport uprawiany jest na boisku o szerokości 15 metrów i długości 11 metrów, co jest równoznaczne z
+                dzieleniem normalnego boiska do koszykówki na dwie części. Każde pole ma pierścień, a obie drużyny
+                atakują lub bronią się. Obie drużyny składają się z trzech graczy i jednego rezerwowego. Zmiany odbywają
+                się w zatrzymanym czasie gry, zawodnik schodzący z boiska musi dotknąć zawodnika wchodzącego.<br>
+                Obszar ograniczony musi mieć linię swobodną znajdującą się na 5,80 metra od końca, w którym znajduje się
+                kosz. Musi również mieć linię dwupunktową, w odległości 6,75 metra od kosza.<br><br>
+                Mecz rozpoczyna się od losowania w celu ustalenia, która drużyna rozpocznie w ataku, a która będzie grać
+                w obronie. Gdy drużyna broniąca odzyskuje piłkę, zmienia się ona w atakującą na kosz, którego
+                broniła.<br>
+                Mecze trwają 10 minut czystej gry, a zegar zatrzymuje się za każdym razem, gdy piłka jest "martwa" lub
+                gdy nastąpił faul.<br>
+                Każda drużyna ma limit czasu i wynosi on 12 sekund od czasu przejęcia piłki do oddania rzutu na kosz
+                przeciwnika.<br><br>
+                Rozgrywki męskie oraz damskie koszykówki 3x3 odbywają się przy użyciu identycznej piłki, posiadającej
+                średnicę piłki koszykarskiej rozmiaru "6" (koszykówka "halowa damska"), o ciężarze piłki "nr 7"
+                (koszykówka "halowa męska").<br><br>
+                Pierwsza drużyna, która przed upływem 10 minut zdobędzie 21 punktów lub więcej, wygrywa grę. Jeśli po
+                dziesięciu minutach żadna drużyna nie zdobyła wymaganego minimum punktów, wygrywa ten, który uzyska
+                wyższy wynik. W przypadku remisu po upływie dziesięciu minut zostanie przyznana minuta odpoczynku, a
+                następnie zostanie rozegrany dodatkowy czas, który potrwa do czasu, gdy drużyna zdoła zdobyć kolejne 2
+                punkty.<br><br>
+                Faule są podobne do klasycznej koszykówki, jednak inaczej liczone. W przeciwieństwie do klasycznej
+                koszykówki, nie bierze się pod uwagę fauli osobistych. Niemniej jednak, ofensywne faule (jeśli nie są
+                techniczne lub niesportowe) nigdy nie skutkują rzutami wolnymi, niezależnie od liczby fauli. Faule
+                techniczne nie sklasyfikowane jako niesportowe powodują 1 rzut wolny i posiadanie piłki. Faule
+                niesportowe są karane 2 rzutami wolnymi i posiadaniem piłki.<br>
+                Za każdy faul wewnątrz linii dwupunktowej rzut wolny zostanie przyznany drużynie, która go otrzymała. Za
+                każdy faul poza linią dwupunktową zostaną przyznane dwa rzuty wolne.<br>
+                Po osiągnięciu sześciu i więcej fauli zostaną przyznane dwa rzuty wolne, niezależnie od rodzaju błędu, a
+                po dziesięciu faulach zostaną przyznane dwa rzuty wolne i posiadanie piłki.<br><br>
+                Gdy zostanie wrzucona piłka do kosza, drużyna, która straciła punkty, wprowadza piłkę do gry poza linię
+                dwupunktową, wykonując podanie lub dotknięcie.<br><br>
+                Zmiany mogą nastąpić, gdy piłka nie jest w grze i odbywa się w linii czołowej do kosza.
+            </p>
+            <p>
+                Informacje pozyskane ze strony <a href="https://pl.wikipedia.org/wiki/Koszyk%C3%B3wka_3%C3%973">Koszykówka 3×3 - Wikipedia, wolna encyklopedia</a>
+            </p>
+            <hr>
+        </div>
+        <div id="sekcja4" class="container">
+            <h1 id="sekcja4h1">Wartościowe media</h1>
+            <p>Paragraf z treścią i <a href="https://www.google.com">linkiem do Google</a>: Lorem ipsum dolor sit amet,
+                consectetur
+                adipiscing elit. In iaculis nisl neque, quis ultricies ligula pellentesque vitae. Suspendisse potenti.
+                Nulla
+                vulputate risus a aliquam auctor. Curabitur dictum vulputate lorem, vitae viverra nibh gravida nec. Cras
+                sed
+                pulvinar ipsum, ac hendrerit leo. Vivamus molestie nibh in mauris laoreet ultricies. Fusce imperdiet
+                nisi
+                sed
+                turpis scelerisque, et fermentum sapien rutrum. Curabitur interdum leo nisl, ac facilisis elit hendrerit
+                at.
+                Integer id viverra nunc. Nunc sollicitudin magna mi, id tempus ipsum cursus non. Curabitur bibendum urna
+                quis
+                ultrices pulvinar. Etiam vulputate neque id sapien venenatis, eu auctor tellus bibendum. Pellentesque
+                eget
+                ipsum
+                sem. Donec efficitur felis non eros faucibus tincidunt. Sed molestie velit nec justo lacinia convallis.
+            </p>
+            <p>Paragraf z treścią: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis nisl neque, quis
+                ultricies ligula pellentesque vitae. Suspendisse potenti. Nulla vulputate risus a aliquam auctor.
+                Curabitur
+                dictum vulputate lorem, vitae viverra nibh gravida nec. Cras sed pulvinar ipsum, ac hendrerit leo.
+                Vivamus
+                molestie nibh in mauris laoreet ultricies. Fusce imperdiet nisi sed turpis scelerisque, et fermentum
+                sapien
+                rutrum. Curabitur interdum leo nisl, ac facilisis elit hendrerit at. Integer id viverra nunc. Nunc
+                sollicitudin
+                magna mi, id tempus ipsum cursus non. Curabitur bibendum urna quis ultrices pulvinar. Etiam vulputate
+                neque
+                id
+                sapien venenatis, eu auctor tellus bibendum. Pellentesque eget ipsum sem. Donec efficitur felis non eros
+                faucibus tincidunt. Sed molestie velit nec justo lacinia convallis. </p>
+            <div class="listanum">
+                <ol>
+                    <li>Element listy numerowanej</li>
+                    <li>Element listy numerowanej</li>
+                    <li>Element listy numerowanej</li>
+                    <li>Element listy numerowanej</li>
+                </ol>
+            </div><div class="listanie">
+                <ul>
+                    <li>Element listy nienumerowanej</li>
+                    <li>Element listy nienumerowanej</li>
+                    <li>Element listy nienumerowanej</li>
+                    <li>Element listy nienumerowanej</li>
+                </ul>
+            </div>
+            <div class="tableall">
+                <p>A tu poniżej znajduje się tabela z ciekawymi mediami:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Magazyny online</th>
+                            <th>Prasa papierowa</th>
+                            <th>Podcasty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"><a href="https://www.mvpmagazyn.pl/">MVPMagazyn</a></td>
+                            <td><a href="https://www.youtube.com/c/PROBASKETLIVE">Probasket Podcast</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://probasket.pl/">Probasket.pl</a></td>
+                            <td>Hoop Magazine</td>
+                            <td><a href="https://www.youtube.com/c/keepthebeat88">Keepthebeat</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2022, Michał Świderek. Wszelkie prawa zastrzeżone.</p>
+        <div id="zegar"><script>onSite();</script></div>
+    </footer>
+</body>
+
+
+
+</html>
